@@ -1,158 +1,223 @@
-
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-rows: 0px 0px 0px 0px;
     grid-template-columns: 0px 0px 0px 0px;
     grid-gap: 0px;
 }
-.grid-item1{
-background: rgba(255, 250, 205, 0);
-text-align: center;
-font-family: monserrat, sans-serif;
-border: rgba(0, 0, 0, 0) 5px solid;
-grid-column-start: 1; 
-grid-column-end: 5; 
-grid-row-start: 1; 
-grid-row-end: 3;
-}
-.grid-item2{
-background: rgba(255, 250, 205, 0);
-text-align: justify;
-border: rgba(173, 216, 230, 0) 2px solid;
-grid-column-start: 1; 
-grid-column-end: 5; 
-grid-row-start: 1; 
-grid-row-end: 3;
-}
-.grid-item3{
-background: rgba(0, 128, 0, 0);
-text-align: center;
-border: rgba(0, 0, 0, 0) 5px solid;
-grid-area: area3;
-}
-.grid-item4{
-justify-items: end;
-background: chocolate;
+
+.grid-item1 {
+    grid-auto-flow: column;
+    background: rgba(255, 250, 205, 0);
+    text-align: center;
+    font-family: 'monserrat', sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-block-start: 24px;
+    margin-inline-start: 10px;
 }
 
-body{
+.grid-item2 {
+    display: grid;
+    background: rgba(255, 250, 205, 0);
+    text-align: justify;
+    border: rgba(173, 216, 230, 0) 2px solid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+/* aca se modifica el titulo principal -Deploy... */
+.grid-item3 {
+    display: grid;
+    background: rgba(0, 128, 0, 0);
+    text-align: center;
+    border: rgba(0, 0, 0, 0) 5px solid;
+    grid-area: area3;
+}
+
+.grid-item4 {
+    display: flex;
+    justify-items: center;
+    background: chocolate;
+}
+
+.grid-item5 {
+    display:flex;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+}
+
+body {
     background-color: #e4611aea;
-    background-image: url(/img/mars4.jpg);
+    background-image: url(../img/mars4.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    
+    animation-delay: 5s ;
 }
-.titulo{
-    text-align: center;
+
+h1 {
     text-decoration: none;
     font-weight: 10;
     font-family: 'Montserrat', sans-serif;
-    color:rgb(255, 255, 255)
 }
-menu{
+p{
+    text-align:justify;
+}
+.p1 {
+    justify-content: center;
+}
+
+.titulo {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 10;
+    margin-top: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255)
+}
+
+menu {
     width: 1122px;
     height: 30px;
+    /* margin-top: 40px; */
     margin-left: -48px;
-    position: relative; 
-    
+    position: relative;   
 }
-.tabla{
+
+.tabla {
     text-align: left;
-    text-decoration: khaki ;
-    border: 3px solid
-    color rgb(255, 255, 255);
+    text-decoration: khaki;
+    border: 3px solid color rgb(255, 255, 255);
 }
-th{
+
+th {
+    text-align: center;
+    font-size: 15px;
     background-color: #e98b1036;
     border: 1px solid;
     color: rgba(0, 0, 0, 0.644);
 }
-td{
+
+td {
     color: rgb(255, 255, 255);
-    text-align:center;
+    text-align: center;
     align-items: baseline;
 }
 
-ol{
-    display:flex;
-    position: relative;
-    justify-content: justify;
-    align-items: center;
-    font-size: 15px;
+ol {
+   display:flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   font-size: 16px;
+   list-style: none;
+   margin: 0;
 }
-li{
-    position: relative;
-    display: flex;
+
+li {
     justify-content: justify;
     margin-top: 10px;
-    color:rgb(255, 255, 255)    
+    color: rgb(255, 255, 255)
 }
-nav a{
+
+ul {
+    text-align: left;
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+nav a {
     text-decoration: none;
+    text-align: center;
     color: rgb(255, 255, 255);
-    display:flex;   
-    justify-content: space-evenly;
-    flex-direction: column; display: inline-flex;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    display: inline-flex;
+    margin-right: 30px;
+    transition-delay: 5ms;
 }
-a{
-    
-    border-color: rgb(255, 255, 255);   
+
+a {
+    border-color: rgb(255, 255, 255);
 }
-i{
-    font-size: 50px;
-    opacity: 50;
-    float:right;
+
+i {
+    margin-top: -50px;
+    font-size: 60px;
+    opacity: 30;
+    float: left;
     border-right: black;
     border-top: black;
     border-left: black;
     border-bottom: black;
     object-position: right;
-    border-style:inherit;
+    border-style: inherit;
     color: #FFF;
 }
-#letra{
+
+img {
+    margin-top: 10px;
+    margin-right: auto;
+    width: 25%;
+    opacity: 60%;
     float: right;
-    margin-top: 50px;
-    margin-right: -60px;
-}
-.fa-space-shuttle{
-    transform: translate(10px, 20px);
-}
-#logo{
-    transform: rotate3d(25);
-}
-.dropdown{
-    float: right;
-    border-bottom: transparent;
-    border-top: transparent;
 
 }
-footer{
+
+#letra {
+    display: flex;
+    float: left;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.fa-space-shuttle {
+    float: left;
+    transform: translate(10px, 60px);
+    width: auto;
+    margin-right: 35px;
+    margin-top: -75px;
+}
+
+i#logo {
+    margin-left: 0;
+    cursor: pointer;
+    transition: margin-left 3s ease-in-out;
+}
+
+
+footer {
     margin-top: 100px;
-    text-align:justify;
+    text-align: justify;
     font-family: sans-serif;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     color: rgb(255, 255, 255);
 }
-contenedor-video{
+
+contenedor-video {
     position: relative;
     bottom: 0px;
     right: 0px;
     opacity: 75%;
-    
-}  
+}
 
-.video{
+.video {
     position: absolute;
     bottom: 0px;
-    top: 400px;
+    top: 480px;
     right: 0px;
     left: inherit;
-    opacity:90%;
+    opacity: 90%;
     border-bottom: white solid 3px;
     border-top: white solid 3px;
     border-left: white solid 3px;
@@ -162,95 +227,129 @@ contenedor-video{
     display: flex;
     align-items: center;
 }
-.formulario-nasa{
-    position: absolute;
-    opacity: 90%;
 
+.formulario-nasa {
+    position: absolute;
+    opacity: 100%;
+    color: burlywood;
+    
 }
-@media (max-width: 768px) {
-    h1{
+
+h3 {
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: white;
+    opacity: 90%;
+}
+
+.form-control {
+    color: #FFF;
+}
+
+div {
+    color: white;
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+    .grid-item4 {
+        justify-content: center;
+    }
+    h1 {
         font-size: 20px;
     }
-    h2{
+    h2 {
         font-size: 10px;
     }
-    .menu{
+    h3 {
+        font-size: 10px;
+        width: auto;
+    }
+    .menu {
         font-size: 15px;
     }
-    a{
-      font-size: 10px;
-      justify-content: justify;
-      margin-top: 20px;
-  }
-    .body{
-        font-size: 20px;
+    a {
+        font-size: 10px;
+        justify-content: justify;
+        margin-top: 20px;
     }
-    i{
+    .body {
+        font-size: 20px;
+        max-width: 100%;
+        width: auto;
+        display: none;
+    }
+    i {
         font-size: 50px;
         margin-top: 7px;
     }
-    .video{
-      margin-top: 170px;
-      margin-right: 35px;
-      font-size: 20px;
-  }
-    .titulo{
-      font-size: 20px;
-      margin-bottom: 40px;
-  }
-    .tabla{
+    .video {
+        background-attachment: fixed;
+        margin-top: 40px;
+        margin-right: 35px;
+        font-size: 20px;
+    }
+    .titulo {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    .tabla {
         font-size: 20px;
         width: auto;
     }
-    td{
+    td {
         font-size: 10px;
     }
-    th{
+    th {
         font-size: 8px;
     }
-    ol{
+    ol {
         font-size: 8px;
     }
-    li{
+    li {
         font-size: 10px;
-        justify-content: center;
+        justify-content: justify;
     }
-    .dropdown{
+    .dropdown {
         font-size: 10px;
     }
-    .fa-space-shuttle{
+    .fa-space-shuttle {
         font-size: 30px;
-        margin:auto;
+        margin-top: -40px;
+        margin-right: 25px;
+        animation-delay: 25%;
     }
-    iframe{
+    iframe {
         font-size: auto;
     }
-    #letra{
+    #letra {
         font-size: 10px;
     }
-    .footer{
+    .footer {
         font-size: 10px;
+        margin-bottom: 40px;
     }
-    p{
-        font-size: 10px;
+    p {
+        font-size: 15px;
+        text-align: left;
+        justify-content: justify;   
     }
-    .formulario-nasa{
+    .formulario-nasa {
+        display: flex;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: 10px;
+        width: 100%;
+        height: 1000px;
+        font-weight: 100px;
+    }
+    legend {
         font-size: auto;
-        font-weight: auto;
-        font-display: auto;
     }
-    legend{
+    fieldset {
         font-size: auto;
     }
-    fieldset{
+    div {
         font-size: auto;
+        margin-top: -10px;
     }
-    div{
-        font-size: auto;
-    }
-  }
-/* navecita en moviento */
-/*  */
-/*  */
-/*  */
-/*  */
+}
